@@ -1,0 +1,79 @@
+<!--index.wxml-->
+  <view class="container">
+    <view class='page-main'>
+      <swiper class='J-swiper' interval="3000" duration="1000" autoplay="{{autoplay}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" indicator-color="{indicatorColor}}" >
+        <block wx:for="{{imgUrls}}" wx:key="key">
+          <swiper-item>
+              <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='page-news'>
+        <image mode="mode"  src="../../images/icon_news.png" class='icon-news'></image>
+        <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="3000">
+           <block wx:for="{{newsList}}" wx:key="key"> 
+            <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">
+                <swiper-item>
+                  <text class='span-news'>{{item.title}}</text>
+                </swiper-item>
+            </navigator>  
+           </block> 
+        </swiper>    
+      </view> 
+      <view class='page-tab flex-warp flex-tab'>
+        <view class='flex-item'>
+          <view class='flex-item'>
+            <image class='page-tab-image' src='../../images/mrqd.jpg'></image>
+          </view>   
+          <text class='page-tab-text'>每日签到</text>
+        </view>
+        <view class='flex-item'>
+          <view class='flex-item'>
+            <image class='page-tab-image' src='../../images/yhcg.jpg'></image>
+          </view>   
+          <text class='page-tab-text'>银行存管</text>
+        </view>
+        <view class='flex-item'>
+          <view class='flex-item'>
+            <image class='page-tab-image' src='../../images/ptsj.jpg'></image>
+          </view>   
+          <text class='page-tab-text'>平台数据</text>
+        </view>
+        <view class='flex-item'> 
+          <view class='flex-item'>
+            <image class='page-tab-image' src='../../images/xsfl.jpg'></image>
+          </view>   
+          <text class='page-tab-text'>新手福利</text>
+        </view>
+      </view>
+      <view class='page-recommend' bindtap='goInvite'>
+          <text class='recommend-title'>新手标0904</text>
+          <view class='recommend-time'>
+            <text class='recommend-qx'>项目期限</text>
+            <text class='recommend-span'>6<text class='recommend-em'>个月</text></text>
+          </view>
+          <view class='recommend-sum'>
+            <text class='recommend-qx'>剩余金额</text>
+            <text class='recommend-span'>50000<text class='recommend-em'>元</text></text>
+          </view>
+          <view class='circleProgress_wrapper'>
+              <!-- <view class='circleprogress'></view> -->
+              <canvas canvas-id="progress" width="300" height="300"/> 
+          </view>
+          <view class='recommend-nhlv'>
+            <text>
+              <text class='nhlv-span1'>10.6</text>%
+              <!-- +<text class='nhlv-span2'>0.5</text>% -->
+            </text>
+          </view>
+      </view>
+      <view class='page-bscg-text'>
+        <image class='page-bscg-image' src='../../images/icon_bscg.png'></image>
+        资金由包商银行安全存管
+      </view>
+    </view>
+  </view> 
+<!-- <view class="bottom" hidden="{{hideBottom}}">
+  <view class='refresh'>{{loadMoreData}}</view>
+</view> -->
+

@@ -1,0 +1,65 @@
+<!--index.wxml-->
+  <view class="container">
+    <view class='m-main'>
+      <view class='m-banner'>
+        <image src='../../images/account/wbanner_02.png'></image>
+        <navigator hidden='{{isLogin}}' url="../../pages/login/index"  hover-class="other-navigator-hover"><button class='m-regbtn'>注册/登录</button></navigator>
+      </view>
+      <view class='flex-warp recharge'>
+        <view class='flex-item m-recharge'>
+          <image src='../../images/account/recharge.png'></image><text>充值</text>
+        </view>
+        <view class='flex-item m-cash'>
+          <image src='../../images/account/cash.png'></image><text>提现</text>
+        </view>
+      </view>
+      <view class='m-szj'>
+        <image src='../../images/account/bg3.png'></image>
+        <text class='m-szj-text'>您还有 <text class='red'>0</text> 笔待收资金</text>
+      </view>
+      <view class='flex-warp m-gongge'>
+        <view class='flex-item m-gongge-li'>
+          <view class='flex-item'>
+            <image src='../../images/account/myinvest.png'></image>
+          </view>
+          <text>我的投资</text>
+        </view>
+        <view class='flex-item m-gongge-li'>
+          <view class='flex-item'>
+            <image src='../../images/account/record.png'></image>
+          </view>
+          <text>交易记录</text>
+        </view>
+        <view class='flex-item m-gongge-li'>
+          <view class='flex-item'>
+            <image src='../../images/account/hongbao.png'></image>
+          </view>
+          <text>红包</text>
+        </view>      
+      </view>
+      <view class='flex-warp m-gongge mbtm20'>
+        <view class='flex-item m-gongge-li nobtmbor'>
+          <view class='flex-item'>
+            <image src='../../images/account/tender.png'></image>
+          </view>
+          <text>预约投标</text>
+        </view>
+        <view class='flex-item m-gongge-li nobtmbor'>
+          <view class='flex-item'>
+            <image src='../../images/account/members.png'></image>
+          </view>
+          <text>会员中心</text>
+        </view>
+        <view class='flex-item m-gongge-li nobtmbor'>
+          <view class='flex-item'>
+            <image src='../../images/account/invite.png'></image>
+          </view>
+          <text>邀请好友</text>
+        </view>      
+      </view>
+    </view>
+  </view> 
+<!-- <view class="bottom" hidden="{{hideBottom}}">
+  <view class='refresh'>{{loadMoreData}}</view>
+</view> -->
+

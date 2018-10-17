@@ -1,0 +1,86 @@
+  <!--product.wxml-->
+<view class="container">
+    <view class="navbar" bindtap="tabFun">
+    	<view class="navbarz">
+      	<view class="nav-li {{curHdIndex=='all'? 'activez' : ''}}" data-id="all">
+        	<text decode="{{true}}" data-id="all">全&nbsp;&nbsp;部</text>
+        </view>
+        <view class="nav-li {{curHdIndex=='wyl'? 'activez' : ''}}"  data-id="wyl">
+        	<text data-id="wyl">微年利</text> 
+        </view>
+        <view class="nav-li {{curHdIndex=='wyy'? 'activez' : ''}}"  data-id="wyy"> 
+        	<text data-id="wyy">微月盈 </text>
+        </view>
+        <view class="nav-li {{curHdIndex=='ww'? 'activez' : ''}}"  data-id="ww">   
+        	<text data-id="ww">微+系列 </text>
+        </view>
+        <view class="nav-li {{curHdIndex=='sds'? 'activez' : ''}}"  data-id="sds" >
+        	<text data-id="sds" decode="{{true}}">散&nbsp;&nbsp;标</text>
+        </view>
+        </view>
+        <view class="productxian"></view>
+        <view class="productxian2"></view> 
+    </view>
+    <view class="contont">
+	   	<view class="contontall">
+          <block wx:for="{{list}}" wx:key="*this">
+            <view class="contontli">
+                <view class="contonttitle" wx:if="{{item.borrow_type == 'sds'}}">{{item.loan_name}}</view>
+                <view class="contonttitle" wx:else>{{item.shut_name}}</view>
+                <view class="contontmidden">
+                    <view class="contontmidden01 clearfix">  
+                        <view class="contontleft fl">
+                            <view class="contontltop clearfix">
+                                <view class="fl contontltop01">历史年化收益率</view>
+                                <view class="fl contontltop02">项目期限</view>
+                            </view>
+                            <view class="contontlbottom clearfix">
+                                <view class="fl contontlbottom01">
+                                    <text class="contontlbottom01_01">{{item.labor_year}}</text>
+                                    <text class="contontlbottom01_02">%</text>
+                                    <block wx:if="{{item.other_labor_year != '0.00'}}">
+                                    <text class="contontlbottom01_02">+</text>
+                                    <text class="contontlbottom01_03">{{item.other_labor_year}}</text>
+                                    <text class="contontlbottom01_02">%</text>
+                                    </block>
+                                    
+                                </view>
+                                <view class="fl contontlbottom02">
+                                    <block wx:if="{{item.interest_type == '1'}}">
+                                    <text class="contontlbottom02_01">{{item.borrow_days}}</text>
+                                    <text class="contontlbottom02_02">天</text>
+                                    </block>
+                                    <block wx:elif="{{item.interest_type == '2'}}">
+                                    <text class="contontlbottom02_01">{{item.borrow_period}}</text>
+                                    <text class="contontlbottom02_02">个月</text>
+                                    </block>
+                                    <block wx:elif="{{item.interest_type == '3'}}">
+                                      <text class="contontlbottom02_01">{{item.borrow_years}}</text>
+                                      <text class="contontlbottom02_02">年</text>
+                                    </block>
+                                </view>
+                            </view>
+                        </view>
+                        <button class="contontright fl" data-shut_id="{{item.shut_id}}" data-loan_nid="{{item.loan_nid}}" bindtap="invest">立即投资</button>
+                    </view>
+                    <view class="contontmidden02">
+                       <progress percent="{{item.schedule}}" active show-info class="progress01" activeColor="#04b4fd" stroke-width="2"/>  
+                    </view>
+                    <view class="contontmidden03 clearfix">
+                       <view class="contontmidden03left fl">
+                           <text>剩余可投金额</text>
+                           <text>{{item.account}}万</text>
+                       </view>
+                       <view class="contontmidden03right fr">
+                       <image src="/images/product/product02.png" class="image01"></image>
+                       <text>按月返息</text></view>    
+                    </view>
+                  </view>
+            </view>
+            </block>
+            <view class="loadall hide {{onshow == false ?'hidden':'show'}}">
+            <text class="load01"></text>我是有底线的<text class="load02"></text>
+            </view>
+        </view> 
+   	</view>  
+</view>

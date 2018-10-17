@@ -1,0 +1,68 @@
+<view class="container">
+  <view class="invest-top">
+    <text class='fontsp'>剩余金额(元)</text>
+    <text class='fontsp fs40'>{{detailList.account_wait}}</text>
+    <view class='flex-warp invest-top-ul'>
+      <view class='flex-item'>
+        <text class='fontsp'>项目期限</text>
+        <text class='fontsp fs28'>{{detailList.borrow_period}}个月</text>
+      </view>
+      <view class='flex-item'>
+        <text class='fontsp'>历史年化收益率</text>
+        <text class='fontsp fs28'>{{detailList.labor_year}}%</text>
+      </view>
+      <view class='flex-item'>
+        <text class='fontsp'>总金额</text>
+        <text class='fontsp fs28'>{{detailList.account}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="invest-main">
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>当前可用余额</text>
+      <text class='flex-item textfr'>500元</text>
+    </view>
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>投资额度</text>
+      <text class='flex-item textfr'>500,000.00元</text>
+    </view>
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>投资金额(元)</text>
+      <input type='number' placeholder='100元起投' maxlength="10"></input>
+      <button class='J_yeqt flex-item textfr'>余额全投</button>
+    </view>
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>预期收益</text>
+      <text class='flex-item textfr'>0.00元</text>
+    </view>
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>使用优惠</text>
+      <text class='flex-item textfr'>无可使用红包</text>
+    </view>
+  </view>
+  <view class="invest-main">
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>还款方式</text>
+      <text class='flex-item textfr'>{{detailList.repayment_methods}}</text>
+    </view>
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>起息时间</text>
+      <text class='flex-item textfr'>满标计息</text>
+    </view>
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>预计到期时间</text>
+      <text class='flex-item textfr'>{{detailList.payment_date}}</text>
+    </view>
+  </view>
+  <view class="invest-main">
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>标的详情</text>
+      <text class='flex-item textfr' decode="emsp">&gt;</text>
+    </view>
+    <view class='flex-warp invest-li'>
+      <text class='flex-item textfl'>网络借贷风险提示及禁止性行为提示书</text>
+      <text class='flex-item textfr' decode="emsp">&gt;</text>
+    </view>
+  </view>
+  <button class='invest-btn J_invest'>立即投资</button>
+</view>

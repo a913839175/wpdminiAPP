@@ -1,0 +1,40 @@
+/* pages/findpwd/pwd.wxss */
+.container{
+  width: 100%;
+  background: #fff; 
+}
+.login-warp{
+  margin-top: 30rpx;
+}
+.form-group{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 56rpx;
+  padding: 60rpx 0 30rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+.form-input{
+  height: 56rpx;
+  font-size: 32rpx;
+  color: #4c4c4c;
+  padding-left: 32rpx;
+}
+.form-button{
+  width: 652rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius:90rpx; 
+  background-color: #b3f1fe;
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+}
+button::after{
+  border: none;
+}
+button[disabled]:not([type]){
+  background-color: #fff; 
+}
+button[disabled]{
+  background-color: #fff; 
+}

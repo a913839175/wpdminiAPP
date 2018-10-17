@@ -1,0 +1,47 @@
+<!--商城首页.wxml-->
+    <view class="container">
+      <view class='page-main'>
+          <view class="packet-compartment"></view>
+          <view class="packet-ul">
+            <view class="packet-li">
+            	<view class="packet-center clearfix">
+            		<image src="../../../images/mall/shop15.png" class="packet-center101"></image>
+                    <view wx:if="{{cid == 2}}" class="packet-center102">投资红包</view>
+                    <view wx:elif="{{cid == 1}}" class="packet-center102">加息红包</view>
+                    <view wx:else class="packet-center102">现金红包</view>   
+                	<image src="../../../images/mall/shop14.png" class="packet-center104"></image> 
+                	<picker mode="selector" range="{{array}}" value="{{index}}" bindchange="listenerPickerSelected">
+                        <view class="packet-center103">{{array[index]}}</view>
+                    </picker>   
+            	</view>
+            </view>
+            <view class="packet-li">
+           		<view class="packet-center clearfix">
+            		<image src="../../../images/mall/shop16.png" class="packet-center201"></image>
+                	<view class="packet-center202">库存数量</view>
+                	<view class="packet-center203">{{store}}件</view>   
+            	</view>
+            </view>
+            <view class="packet-li">
+           		<view class="packet-center clearfix">
+            		<image src="../../../images/mall/shop17.png" class="packet-center301"></image>
+                	<view class="packet-center302">兑换份数</view>
+                	<view class="packet-center303 clearfix">
+                		<button disabled="{{disabled1}}" type="defaule" class="packet-center303_1 {{num > 1 ? 'buttonhover' : ''}}" bindtap="jianhao">-</button>
+                		<view class="packet-center303_2">{{num}}</view>
+                		<button disabled="{{disabled2}}" type="defaule" class="packet-center303_3 {{num < 10 ? 'buttonhover' : ''}}" bindtap="jiahao">+</button>
+                	</view>   
+            	</view>
+            </view>
+            <view class="packet-li">
+           		<view class="packet-center clearfix">
+            		<image src="../../../images/mall/shop18.png" class="packet-center401"></image>
+                	<view class="packet-center402">所需微币</view>
+                	<view class="packet-center403">{{price}}</view>   
+            	</view>
+            </view>
+          </view>
+          <view class="packet-sure" bindtap="packetsure">立即兑换</view>
+      </view>
+    </view>
+

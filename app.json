@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/product/product",
+    "pages/invest/invest_detail",
+    "pages/mall/index/mall",         
+    "pages/mall/coinsuse/coinsuse", 
+    "pages/account/index",
+    "pages/login/index",
+    "pages/findpwd/index",
+    "pages/findpwd/pwd",
+    "pages/mall/packet/packet"
+  ],
+  "window":{
+    "backgroundColor":"#f2f2f2",
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#04b4fd",
+    "navigationBarTitleText": "微拍贷",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor":"#fff",
+    "color":"#999999",
+    "selectedColor": "#04b4fd",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/footer_01.png",
+        "selectedIconPath": "images/footer_011.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "投资",
+        "iconPath": "images/footer_02.png",
+        "selectedIconPath": "images/footer_021.png"
+      },
+      {
+        "pagePath": "pages/mall/index/mall",
+        "text": "商城",
+        "iconPath": "images/footer_04.png",
+        "selectedIconPath": "images/footer_041.png"
+      },
+      {
+        "pagePath": "pages/account/index",
+        "text": "我",
+        "iconPath": "images/footer_03.png",
+        "selectedIconPath": "images/footer_031.png"
+      }
+    ]
+  }
+}

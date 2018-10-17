@@ -1,0 +1,64 @@
+/**index.wxss**/
+
+.container{
+  width: 100%;
+  background: #fff; 
+}
+.login-warp{
+  margin-top: 30rpx;
+}
+.form-group{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 56rpx;
+  padding: 60rpx 0 30rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+.form-label image{
+  width: 50rpx;
+  height: 56rpx;
+  float: left;
+}
+.form-input{
+  width: 398rpx;
+  height: 56rpx;
+  font-size: 32rpx;
+  color: #4c4c4c;
+  padding-left: 32rpx;
+  float: left;
+  border-right:2rpx solid #e0e0e0; 
+}
+.form-forget{
+  padding: 50rpx 0;
+  color: #04b4fd;
+  font-size: 30rpx;
+  text-align: center;
+}
+.form-button{
+  width: 652rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius:90rpx; 
+  background-color: #b3f1fe;
+  color: #fff;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+}
+.form-code{
+  width: 240rpx;
+  float: left;
+  font-size: 32rpx;
+  color: #bfbfbf;
+  background: none;
+  position: relative;
+  top: -8rpx;
+}
+button::after{
+  border: none;
+}
+button[disabled]:not([type]){
+  background-color: #fff; 
+}
+button[disabled]{
+  background-color: #fff; 
+}

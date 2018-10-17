@@ -1,0 +1,9 @@
+<!--index.wxml-->
+  <view class="container">
+    <view class='login-warp'>
+        <view class='form-group'>
+          <input class='form-input' type='text' placeholder='请输入密码(由字母和数字组成)' maxlength='20' bindinput='pwdInput'></input>
+        </view>
+        <button class='form-button' bindtap="completeClick">完成</button>
+    </view>
+  </view> 

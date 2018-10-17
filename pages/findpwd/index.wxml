@@ -1,0 +1,12 @@
+<!--index.wxml-->
+  <view class="container">
+    <view class='login-warp'>
+        <view class='form-group'>
+          <input class='form-input' type='number' placeholder='请输入验证码' maxlength='11' bindinput='codeInput'></input>
+          <button class='form-code' disabled='{{disabled}}' bindtap="codeClick">{{codeHtml}}</button>
+        </view>
+        <button class='form-button' bindtap="nextClick">下一步</button>
+    </view>
+  </view> 
+
+

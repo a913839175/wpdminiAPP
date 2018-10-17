@@ -1,0 +1,63 @@
+.invest-top{
+  width: 100%;
+  height: 300rpx;
+  background: #46b4ff;
+}
+.fontsp{
+  display: flex;
+  justify-content:center;
+  color: #ffffff;
+  font-size: 26rpx;
+  margin-top: 34rpx;
+}
+.fs40{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.fs28{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+.invest-main{
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.invest-li{
+  padding: 0 30rpx;
+  height: 90rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  color: #4c4c4c;
+  font-size: 26rpx;
+  align-items:center;
+}
+.textfl{
+  text-align: left;
+}
+.textfr{
+  text-align: right;
+}
+button.J_yeqt{
+  color: #04b4fd;
+  display: inline-block;
+  width: 100rpx;
+  padding:0 5rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 26rpx;
+  border:1px solid #04b4fd; 
+}
+button::after{
+  border: none;
+}
+.invest-btn{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #04b4fd;
+  color: #fff;
+  border-radius: 0;
+  font-size: 30rpx;
+  font-weight: bold;
+}

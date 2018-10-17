@@ -1,0 +1,98 @@
+<!--商城首页.wxml-->
+    <view class="container">
+      <view class='page-main'>
+        <swiper class='J-swiper' interval="3000" duration="1000" autoplay="{{autoplay}}" indicator-dots="{{indicatorDots}}" indicator-active-color="{{indicatorActiveColor}}" indicator-color="{indicatorColor}}" >
+          <block wx:for="{{imgUrls}}" wx:key="key">
+            <swiper-item>
+              <image src="{{item}}" class="slide-image" />
+            </swiper-item>
+          </block>
+        </swiper>
+        <!-- 可用微币和兑换记录入口 -->
+        <view class='malli-main clearfix'>
+          <view class="malli-mainleft fl">
+            <view class='mainleft-text1'>{{credit}}</view>
+            <view class='mainleft-text2'>可用微币</view>
+          </view>
+          <view class="malli-mainright fl" bindtap="coinrecord">
+            <image src="../../../images/mall/shop01.png" class="mainright01"></image>
+            <view class='mainright-text1'>兑换记录</view>
+          </view>
+        </view>
+        <!-- 红包兑换的入口 -->
+        <view class="malli-hb">
+          <view class="malli-hb01">红包兑换</view>
+          <view class="malli-hb02" bindtap="tabFun">
+            <view class="malli-li01" >
+              <image src="../../../images/mall/shop02.png" class="malli-liimg01"  data-id="0"></image>
+              <view class='malli-liimgte01' data-id="0">现金红包</view>
+            </view>
+            <view class="malli-li02" data-id="touzi">
+              <image src="../../../images/mall/shop03.png" class="malli-liimg01"  data-id="1"></image>
+              <view class='malli-liimgte01'  data-id="1">投资红包</view>
+            </view>
+            <view class="malli-li03" data-id="jiaxi">
+              <image src="../../../images/mall/shop04.png" class="malli-liimg01"  data-id="2"></image>
+              <view class='malli-liimgte01'  data-id="2">加息红包</view>
+            </view>
+          </view>
+        </view>
+        <!-- 产品分类的入口 -->
+        <view class="productsz">
+          <!-- 推荐产品 -->
+          <view class="products01 clearfix">
+            <view class="products1 clearfix">
+            <view class="products1_01"></view>
+            <view class="products1_02">推荐产品</view> 
+          </view>
+          <view class="products2 clearfix">
+            <block wx:for="{{productList[0].products}}" wx:key="*this">
+              <view class="products2_0">
+                <view class="bjproduct">
+                <image src="{{item.img}}" class="products02_1"></image>
+                </view>
+                <view class="products02_2">{{item.name}}</view>
+                <view class="products02_3"></view>
+                <view class="products02_4">{{item.price}}微币</view>
+              </view>
+            </block>
+          </view>
+          </view>
+        </view>
+        <!-- 其他产品 -->
+        <block wx:for="{{productList}}" wx:key="*this">
+          <block wx:if="{{index != 0}}">
+            <view class="productsty">
+              <view class="productsty1 clearfix" style="background: #{{item.bgColor}}">
+                <view class="productsty_01"></view>
+                <view class="productsty_02">{{item.cname}}</view>
+                <view class="productsty_03" data-cid="{{item.cid}}">更多></view>  
+              </view>
+              <view class="productstyul">
+                <view class="productstyli" wx:for="{{item.products}}" wx:key="*this" wx:for-item="items">
+                  <view class="productstyliwkuang">
+                    <view class="pstyli-kuang" data-id="{{items.id}}">
+                      <image src="{{items.img}}" class="productstyli01"></image>
+                    </view>
+                  </view>
+                  <view class="productstyli02">{{items.name}}</view>
+                  <view class="productstyli03">
+                    <image src="../../../images/mall/shop10.png" class="productstyli04"></image>
+                    <text class="productstyli05">40,000</text>
+                    <text class="productstyli06">剩余<text class="productstyli07">5</text>件</text>
+                  </view>
+                </view>
+              </view>
+            </view>      
+          </block>
+        </block>
+        <view class="LoadAll">
+          <view class="LoadLocation clearfix">
+            <view class="LoadLeftWire"></view>
+            <view class="LoadDescribe">已加载全部</view>
+            <view class="LoadRightWire"></view>
+          </view>  
+        </view>  
+      </view>
+    </view>
+

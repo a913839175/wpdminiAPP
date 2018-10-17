@@ -1,0 +1,34 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+.page-scroll {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.refresh {
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #959595;
+}
+
+.flex-warp {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.flex-item {
+  flex-grow: 1;
+  text-align: center;
+}
